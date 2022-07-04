@@ -24,6 +24,6 @@ app.use('/api/v1/iot/', require('./routes/iot'))
 // Scheduled functions
 require('./cronjobs/expiredReservations')
 
-app.listen(8080, () => {
+app.listen(process.env.PORT, () => {
     console.log(`Server is running on port: 8080`)
 })
